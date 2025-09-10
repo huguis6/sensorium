@@ -37,13 +37,48 @@ h1{
      font-family: "Swiss 721 Bold BT"; 
 }
 
+p{
+font-family: "Lato", sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
 h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Swiss 721 Light BT', sans-serif;
     font-weight: normal;
     color: #333;
 }
+ @font-face {
+        font-family: 'Eucrosia'; 
+        src: url('../Fonts/EucrosiaUPC.ttf') format('truetype');
+    }
+    
+     @font-face {
+        font-family: 'Amsterdam Two'; 
+        src: url('../Fonts/amsterdam-two-ttf.ttf') format('truetype');
+    }
 
+.espacioTitle{
+    font-family: 'Eucrosia', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #8d6819;
+    text-align: center;
+    margin-bottom: -4rem;
+}
 
+.text-WhytochooseUs{
+    color: #A48D61 !important;
+}
+
+.sensoriumTitle{
+    font-family: 'Amsterdam Two', sans-serif;
+    font-size: 7rem;
+    font-weight: bold;
+    color: #8d6819;
+    text-align: center;
+    margin-bottom: 1rem;
+}
 
 @medie (min-aspect-ratio: 16/9){
     .back-video{
@@ -52,11 +87,7 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
     }
 }
 
-.navbar-default {
-    background-color: white ;
-    transition: background-color 0.3s;
-    z-index: 20 !important;
-}
+
 .parallax-separator {
     height: 100px;
     background-image: url('./assets/img-parallax.jpg');
@@ -72,6 +103,28 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
     background: rgba(0,0,0,0.45); /* Oscurece la imagen */
     z-index: 1;
 }
+
+.link-underline {
+  position: relative;
+  text-decoration: none; 
+  color: #333;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  width: 0; 
+  height: 2px; 
+  bottom: 0;
+  left: 0;
+  background-color: #8d6819; 
+  transition: width 0.3s ease-out; 
+}
+
+.link-underline:hover::after {
+  width: 100%; /* Expand to full width on hover */
+}
+
 
 footer a{
 border-radius: 25px;
@@ -120,24 +173,17 @@ header {
 }
 
 
-/* Formaliza los títulos y textos */
-.sectionPorqueElegirnos h1 {
-    font-family: 'Georgia', serif;
-    letter-spacing: 1px;
-}
 
-.sectionPorqueElegirnos span {
-    font-family: 'Georgia', serif;
-}
-
-.sectionPorqueElegirnos p {
-    font-family: 'Segoe UI', 'Arial', sans-serif;
-}
 #video {
     z-index: -2 ;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
+}
+
+nav a img{
+    width: 129px;
+  height: auto;
 }
 
 #video iframe {
@@ -150,10 +196,24 @@ pointer-events: none;
   height: 100%;
 }
 
+nav {
+    background-color: transparent;
+    transition: background-color 0.5s ease; /* Smooth transition */
+    position: fixed; /* Or sticky */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-scrolled {
+    background-color: white; /* Or your desired solid color */
+    color: black; /* Or color of text */
+}
+
 .parallax-separator {
     
     position: relative;
-    height: 200px;
+    height: 400px;
     background-image: url('../assets/img_86722-Aq2obyPBx3CzQoQM.jpg');
     background-attachment: fixed;
     background-position: center;
