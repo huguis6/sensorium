@@ -11,7 +11,14 @@
     border: none;
     z-index: -2;
     pointer-events: none;
+   
 }
+
+#video{
+        pointer-events: none;
+
+}
+
 
 @font-face {
     font-family: "Swiss 721 Light BT";
@@ -80,6 +87,12 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
 .text-WhytochooseUs{
     color: #A48D61 !important;
 }
+
+#video {
+    color: #fff;
+}
+
+
 
 .sensoriumTitle{
     font-family: 'Amsterdam Two', sans-serif;
@@ -214,10 +227,19 @@ nav {
     top: 0;
     z-index: 1000;
 }
+.navbar ul li a{
+    color: white !important; 
+}
+
+
 
 .navbar-scrolled {
-    background-color: white; /* Or your desired solid color */
-    color: black; /* Or color of text */
+    background-color: white; 
+    color: black !important; 
+
+    ul li a{
+        color: black !important; 
+    }
 }
 
 .parallax-separator {

@@ -24,15 +24,25 @@
     allowfullscreen>
 </iframe>
 --->
-<!--
+
 
 <div id="video">
-  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1vxRDAJshuk?autoplay=1&mute=1&loop=1&playlist=1vxRDAJshuk&start=142" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-    <div style="z-index: 2; padding: 100px;" class="" >
-    <img src="./assets/sensorium_logo_2.png" alt="" style="width: 50%;">
+  <iframe width="100%"  height="100%" src="https://www.youtube.com/embed/1vxRDAJshuk?autoplay=1&mute=1&loop=1&playlist=1vxRDAJshuk&start=142" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<div style=" align-content: center; align-items: center;">
+  
+    <div style="height: 100vh; text-align: center; align-content: center; ">
+      <p style="margin-bottom: 10%; margin-top: 10%;">Salon de Eventos y Multiespacio</p>  
+      <div class="flex flex-col">
+          <span class="espacioTitle">E S P A C I O</span>
+          <span class="sensoriumTitle">Sensorium</span>
+          <p style=" width: 50%; margin: auto; margin-top: 10%; font-size: 20px;">Un espacio único en Olivos, junto a Panamericana, pensado para vivir experiencias y concretar historias. En Espacio Sensorium te acompañamos a desarrollar proyectos, talleres y eventos en un entorno cálido, versátil y lleno de inspiración.</p>
+        </div>
+        <a href="" > <button style="margin-top: 5%; margin-bottom: 5%;">CONTACTO</button></a>
+</div>
 </div>
 </div>  
--->
+
 
 
 
@@ -75,17 +85,7 @@
 </nav>
 
 
-<div style="background-image: url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/Aq2oGQxBaEuXNMPy/augustine-wong-oebtm5whtfw-unsplash-2calido-dJo4WEMnw1HPvE58.jpg'); align-content: center; align-items: center;">
-  
-    <div style="height: 100vh; text-align: center; align-content: center; ">
-      <p style="margin-bottom: 10%; margin-top: 10%;">Salon de Eventos y Multiespacio</p>  
-      <div class="flex flex-col">
-          <span class="espacioTitle">E S P A C I O</span>
-          <span class="sensoriumTitle">Sensorium</span>
-          <p style=" width: 50%; margin: auto; margin-top: 10%; font-size: 20px;">Un espacio único en Olivos, junto a Panamericana, pensado para vivir experiencias y concretar historias. En Espacio Sensorium te acompañamos a desarrollar proyectos, talleres y eventos en un entorno cálido, versátil y lleno de inspiración.</p>
-        </div>
-        <a href="" > <button style="margin-top: 5%; margin-bottom: 5%;">CONTACTO</button></a>
-</div>
+
 
 
     </header>
@@ -191,7 +191,8 @@
 
 </div>
 -->
-</div>
+
+
 
 
 <div class="sectionPorqueElegirnos text-center py-12 bg-gray-50">
@@ -241,13 +242,13 @@ PARA TU EVENTO</h1>
 
 <div class="py-24 px-8 max-w-5xl mx-auto flex flex-col md:flex-row gap-12">
     <div class="flex flex-col text-left basis-1/2">
-        <p class="inline-block font-semibold text-primary mb-4">Insurance FAQ</p>
+        <p class="inline-block font-semibold text-primary mb-4"></p>
         <p class="sm:text-4xl text-3xl  text-base-content"><span style="color: #8d6819;"> Preguntas </span> Frecuentes</p>
     </div>
     <ul class="basis-1/2">
         <li>
             <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
-                <span class="flex-1 text-base-content">How secure is my insurance information?</span>
+                <span class="flex-1 text-base-content">Cuantas personas hay de capacidad?</span>
                 <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
                     <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
@@ -290,13 +291,6 @@ PARA TU EVENTO</h1>
     </ul>
 </div>
 
-<script>
-    function toggleFAQ(button) {
-        const content = button.nextElementSibling;
-        button.setAttribute("aria-expanded", button.getAttribute("aria-expanded") === "false" ? "true" : "false");
-        content.style.maxHeight = button.getAttribute("aria-expanded") === "true" ? content.scrollHeight + "px" : "0";
-    }
-</script>
 
 
 
@@ -345,8 +339,8 @@ PARA TU EVENTO</h1>
 
     <script>
   const marcaSwiper = new Swiper('.marcaSwiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 0,
+    slidesPerView: '3',
+    spaceBetween: 2,
     loop: true,
     loopedSlides: 'auto', 
     speed: 6000,
@@ -362,7 +356,7 @@ PARA TU EVENTO</h1>
 
 <script>
    const navbar = document.querySelector('.navbar');
-const scrollThreshold = 1; 
+const scrollThreshold = 20; 
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > scrollThreshold) {
@@ -373,6 +367,16 @@ window.addEventListener('scroll', () => {
 });
 
 </script>
+
+
+<script>
+    function toggleFAQ(button) {
+        const content = button.nextElementSibling;
+        button.setAttribute("aria-expanded", button.getAttribute("aria-expanded") === "false" ? "true" : "false");
+        content.style.maxHeight = button.getAttribute("aria-expanded") === "true" ? content.scrollHeight + "px" : "0";
+    }
+</script>
+
     
 </body>
 </html>
