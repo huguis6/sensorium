@@ -58,6 +58,14 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
         src: url('../Fonts/amsterdam-two-ttf.ttf') format('truetype');
     }
 
+
+.quality{
+    color: #8d6819 !important;
+}
+
+.quality-text{
+    color: #A48D61 !important;
+}
     
 
 .espacioTitle{
