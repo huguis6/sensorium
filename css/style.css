@@ -209,6 +209,13 @@ nav a img{
   height: auto;
 }
 
+.imgs img{
+    border-radius: 10px;
+}    iframe {
+      pointer-events: none;
+      border: none;
+    }
+
 #video iframe {
 pointer-events: none;
     z-index: -2;

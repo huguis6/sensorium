@@ -26,22 +26,22 @@
 --->
 
 
-<div id="video">
-  <iframe width="100%"  height="100%" src="https://www.youtube.com/embed/1vxRDAJshuk?autoplay=1&mute=1&loop=1&playlist=1vxRDAJshuk&start=142" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-
-<div style=" align-content: center; align-items: center;">
-  
-    <div style="height: 100vh; text-align: center; align-content: center; ">
-      <p style="margin-bottom: 10%; margin-top: 10%;">Salon de Eventos y Multiespacio</p>  
-      <div class="flex flex-col">
-          <span class="espacioTitle">E S P A C I O</span>
-          <span class="sensoriumTitle">Sensorium</span>
-          <p style=" width: 50%; margin: auto; margin-top: 10%; font-size: 20px;">Un espacio único en Olivos, junto a Panamericana, pensado para vivir experiencias y concretar historias. En Espacio Sensorium te acompañamos a desarrollar proyectos, talleres y eventos en un entorno cálido, versátil y lleno de inspiración.</p>
-        </div>
-        <a href="" > <button style="margin-top: 5%; margin-bottom: 5%;">CONTACTO</button></a>
+<div id="video" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JJVeNFRr9xI?autoplay=1&mute=1&loop=1&playlist=JJVeNFRr9xI&" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+  <div style="
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100vh;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; z-index: 2; color: #fff; background: rgba(0,0,0,0.25);">
+    <p style="margin-bottom: 2rem; margin-top: 2rem; font-size: 1.2rem;">Salon de Eventos y Multiespacio</p>
+    <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+      <img src="./assets/sensorium_logo_2.png" alt="" style="width: 90vw; max-width: 850px; margin: auto; border-radius: 24px;">
+      <p style="width: 90vw; max-width: 800px; margin: 2rem auto 0 auto; font-size: 1.3rem;">
+        Un espacio único en Olivos, junto a Panamericana, pensado para vivir experiencias y concretar historias. En Espacio Sensorium te acompañamos a desarrollar proyectos, talleres y eventos en un entorno cálido, versátil y lleno de inspiración.
+      </p>
+    </div>
+  </div>
 </div>
-</div>
-</div>  
 
 
 
@@ -191,17 +191,18 @@
 
 </div>
 -->
+</div>
 
 
 
 
 <div class="sectionPorqueElegirnos text-center py-12 bg-gray-50">
-    <h1 class="text-4xl font-bold mb-8 text-gray-800"><span style="color: #A48D61;">POR QUÉ ELEGIRNOS</span>
+    <h1 class="text-4xl font-bold mb-8 text-gray-800"><span style="color: #A48D61; font-size: 40px;">POR QUÉ ELEGIRNOS</span>
 PARA TU EVENTO</h1>
-    <h3 style="width: 50%; margin: auto; margin-bottom: 30px; margin-top: 30px;" class="text-WhytochooseUs">En <span style="color: #8d6819; font-weight: 800 !important;"> Espacio Sensorium </span>, ofrecemos un entorno único donde los sentidos se encuentran. Nos especializamos en crear experiencias inolvidables y alquilamos nuestro espacio para eventos privados, personalizados, catas de vinos, maridajes y reuniones corporativas.</h3>
+    <h3 style="width: 50%; margin: auto; margin-bottom: 30px; margin-top: 30px; font-size: 20px;" class="text-WhytochooseUs">En <span style="color: #8d6819; font-weight: 800 !important;"> Espacio Sensorium </span>, ofrecemos un entorno único donde los sentidos se encuentran. Nos especializamos en crear experiencias inolvidables y alquilamos nuestro espacio para eventos privados, personalizados, catas de vinos, maridajes y reuniones corporativas.</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
         <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
-            <span class="text-xl font-semibold text-gray-700 mb-2 quality">Calidez y atención</span>
+            <span class="text-xl font-semibold text-gray-700 mb-2 quality " style="font-size: 20px;">Calidez y atención</span>
             <p class="text-gray-500 text-sm quality-text">Nos destacamos por el trato humano y personalizado.</p>
         </div>
         <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
@@ -248,7 +249,7 @@ PARA TU EVENTO</h1>
     <ul class="basis-1/2">
         <li>
             <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
-                <span class="flex-1 text-base-content">Cuantas personas hay de capacidad?</span>
+                <span class="flex-1 text-base-content">¿Cuál es la capacidad del salón?</span>
                 <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
                     <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
@@ -256,13 +257,13 @@ PARA TU EVENTO</h1>
             </button>
             <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
                 <div class="pb-5 leading-relaxed">
-                    <div class="space-y-2 leading-relaxed">We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.</div>
+                    <div class="space-y-2 leading-relaxed">La capacidad del espacio es para 40 personas sentadas.</div>
                 </div>
             </div>
         </li>
         <li>
             <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
-                <span class="flex-1 text-base-content">How can I customize my insurance coverage?</span>
+                <span class="flex-1 text-base-content">¿Se puede reservas por hora?</span>
                 <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
                     <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
@@ -270,13 +271,13 @@ PARA TU EVENTO</h1>
             </button>
             <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
                 <div class="pb-5 leading-relaxed">
-                    <div class="space-y-2 leading-relaxed">Our insurance plans are customizable. You can tailor your coverage to meet your specific needs and budget.</div>
+                    <div class="space-y-2 leading-relaxed">La reserva puede ser por hora, mínima reserva de horas, media jornada o jornada completa.</div>
                 </div>
             </div>
         </li>
         <li>
             <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
-                <span class="flex-1 text-base-content">Is there a waiting period for insurance claims?</span>
+                <span class="flex-1 text-base-content">¿Qué servicios adicionales ofrecen para eventos corporativos?</span>
                 <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                     <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
                     <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
@@ -284,7 +285,50 @@ PARA TU EVENTO</h1>
             </button>
             <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
                 <div class="pb-5 leading-relaxed">
-                    <div class="space-y-2 leading-relaxed">There may be a waiting period for certain insurance claims, depending on the policy terms and conditions. Please refer to your policy documents for details.</div>
+                    <div class="space-y-2 leading-relaxed">Brindamos servicios de catering, coffee y catas para cierres corporativos. La cotización de esos servicios es aparte del valor del salón.</div>
+                </div>
+            </div>
+        </li>
+         <li>
+            <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+                <span class="flex-1 text-base-content">¿El lugar dispone de estacionamiento?</span>
+                <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                </svg>
+            </button>
+            <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
+                <div class="pb-5 leading-relaxed">
+                    <div class="space-y-2 leading-relaxed">Si, en el predio donde estamos ubicados tenemos a disposición estacionamiento sin costo y vigilancia 24/7.</div>
+                </div>
+            </div>
+        </li>
+         <li>
+            <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+                <span class="flex-1 text-base-content">¿Se permite el uso de música en vivo o DJs durante los eventos?</span>
+                <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                </svg>
+            </button>
+            <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
+                <div class="pb-5 leading-relaxed">
+                    <div class="space-y-2 leading-relaxed">Si se permite música y DJ en vivo ó acústico con instrumentos.</div>
+                </div>
+            </div>
+        </li>
+
+         <li>
+            <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+                <span class="flex-1 text-base-content">¿Es posible realizar visitas previas al salón antes de la contratación?</span>
+                <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                </svg>
+            </button>
+            <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
+                <div class="pb-5 leading-relaxed">
+                    <div class="space-y-2 leading-relaxed">Podés coordinar tu cita/reunión en la sección de calendario.</div>
                 </div>
             </div>
         </li>
@@ -368,7 +412,7 @@ window.addEventListener('scroll', () => {
 
 </script>
 
-
+  
 <script>
     function toggleFAQ(button) {
         const content = button.nextElementSibling;

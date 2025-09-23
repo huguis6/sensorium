@@ -2,6 +2,7 @@ $(document).ready(function(){
    var scroll_start = 0;
    var startchange = $('#startchange');
    var offset = startchange.offset();
+   var navBar= $('.navbar-default');
     if (startchange.length){
    $(document).scroll(function() { 
       scroll_start = $(this).scrollTop();
