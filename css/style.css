@@ -301,10 +301,9 @@ nav {
   align-items: center;
 }
 
-/* Estilo formal para las cards principales */
 .grid > .bg-white {
     border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13), 0 1.5px 6px rgba(0,0,0,0.08);
     transition: box-shadow 0.3s, transform 0.3s;
     background: linear-gradient(135deg, #f8fafc 80%, #e2e8f0 100%);
     border: 1px solid #e5e7eb;
@@ -314,12 +313,12 @@ nav {
     flex-direction: column;
     align-items: center;
 }
-
+/*
 .grid > .bg-white:hover {
     box-shadow: 0 8px 32px rgba(0,0,0,0.16), 0 3px 12px rgba(0,0,0,0.12);
     transform: translateY(-4px) scale(1.02);
 }
-
+*/
 .grid > .bg-white img {
     border-radius: 12px;
     margin-bottom: 1rem;
