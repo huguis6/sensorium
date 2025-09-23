@@ -127,6 +127,14 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
     z-index: 1;
 }
 
+.parallax-separator2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45); /* Oscurece la imagen */
+    z-index: 1;
+}
+
 .link-underline {
   position: relative;
   text-decoration: none; 
@@ -253,7 +261,22 @@ nav {
     
     position: relative;
     height: 400px;
-    background-image: url('../assets/img_86722-Aq2obyPBx3CzQoQM.jpg');
+    background-image: url('../assets/WhatsApp\ Image\ 2025-09-10\ at\ 12.31.27.jpeg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        color: rgba(161, 103, 103, 0.705);
+
+}
+.parallax-separator2 {
+    
+    position: relative;
+    height: 400px;
+    background-image: url('../assets/WhatsApp\ Image\ 2025-09-10\ at\ 12.31.26\ \(2\).jpeg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
