@@ -73,7 +73,9 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
 .quality-text{
     color: #A48D61 !important;
 }
-    
+    nav li a{
+        font-size: 20px;
+    }
 
 .espacioTitle{
     font-family: 'Eucrosia', sans-serif;
@@ -190,7 +192,7 @@ header {
 
 @media (max-width: 768px) {
     header {
-        height: 40vh; 
+        height: auto; 
         min-height: 150px;
     }
 }
@@ -408,3 +410,246 @@ nav {
         font-size: 0.9rem;
     }
 }
+
+@media (min-width:990px) {
+    .sa{
+        justify-content: space-between  !important;
+    }
+    }
+
+    @media (max-width: 900px) {
+
+  .parallax-separator{
+    height: 300px !important;
+  }
+}
+
+/* Estilos generales para la sección */
+.sectionPorqueElegirnos {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.text-WhytochooseUs {
+    font-size: 1.2rem;
+    color: #A48D61;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Grilla */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Estilos para cada tarjeta */
+.grid > .bg-white {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13), 0 1.5px 6px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(135deg, #f8fafc 80%, #e2e8f0 100%);
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+/* Estilo para las imágenes */
+.grid > .bg-white img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    margin-bottom: 1rem;
+}
+
+/* Títulos */
+.grid > .bg-white h2 {
+    font-family: 'Georgia', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+/* Párrafos */
+.grid > .bg-white p {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 0.98rem;
+    color: #4b5563;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Hover de las tarjetas */
+.grid > .bg-white:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.16), 0 3px 12px rgba(0,0,0,0.12);
+    transform: translateY(-4px) scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .grid > .bg-white img {
+        max-width: 120px;
+    }
+
+    .text-WhytochooseUs {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 1018px) {
+  .caracteristicasDelSalon {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    padding: 2rem 0.5rem !important;
+    align-items: center !important;
+  }
+  .parallax-separator{
+    height: 300px !important;
+  }
+
+  .caracteristicasDelSalon > div {
+    width: 100% !important;
+    min-width: 0 !important;
+    text-align: center !important;
+  }
+  .caracteristicasDelSalon h2 {
+    font-size: 1.3rem !important;
+    margin-bottom: 1rem !important;
+    word-break: break-word;
+  }
+  .caracteristicasDelSalon .flex.flex-row {
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+    width: 100% !important;
+    align-items: center !important;
+  }
+  .caracteristicasDelSalon .flex.items-center {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .caracteristicasDelSalon span,
+  .caracteristicasDelSalon p,
+  .caracteristicasDelSalon div {
+    font-size: 1rem !important;
+    word-break: break-word;
+    max-width: 95vw !important;
+  }
+  .caracteristicasDelSalon svg {
+    width: 28px !important;
+    height: 28px !important;
+    margin-right: 0.5rem !important;
+  }
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* This is for a 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensures video cannot be interacted with */
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.video-overlay p {
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.video-overlay img {
+  width: 90vw;
+  max-width: 850px;
+  margin: 2rem auto;
+  border-radius: 24px;
+}
+
+@media (max-width: 768px) {
+  .video-overlay p {
+    font-size: 1rem;
+  }
+
+  .video-overlay img {
+    width: 80vw;
+    max-width: 700px;
+  }
+}
+
+
+.navbar .contact-btn {
+  margin-left: auto;  /* Esto pone el botón pegado a la derecha */
+  background-color: #E8CD9F;
+  color: black;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* Ajuste del contenedor de texto "Multi eventos" */
+.multi-eventos-text {
+  word-wrap: break-word;  /* Rompe la palabra cuando no cabe */
+  overflow: hidden;  /* Evita que el texto se desborde */
+  text-overflow: ellipsis; /* Si es muy largo, agrega "..." al final */
+  width: 100%;  /* Asegura que ocupe el 100% del ancho del contenedor */
+  max-width: 90%;  /* Limita el ancho máximo */
+  white-space: normal; /* Permite el ajuste de línea del texto */
+}
+
+/* Asegura que el texto largo se ajuste correctamente */
+@media (max-width: 768px) {
+  .multi-eventos-text {
+    font-size: 1rem; /* Ajuste de tamaño para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 1200px) {
+  header p{
+   display: none;
+  }
+}
+
+@media (max-width: 1430px) {
+  header {
+   height: auto !important;
+  }
+}
+

@@ -26,22 +26,18 @@
 --->
 
 
-<div id="video" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
-  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JJVeNFRr9xI?autoplay=1&mute=1&loop=1&playlist=JJVeNFRr9xI&" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-  <div style="
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100vh;
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    text-align: center; z-index: 2; color: #fff; background: rgba(0,0,0,0.25);">
-    <p style="margin-bottom: 2rem; margin-top: 2rem; font-size: 1.2rem;">Salon de Eventos y Multiespacio</p>
-    <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-      <img src="./assets/sensorium_logo_2.png" alt="" style="width: 90vw; max-width: 850px; margin: auto; border-radius: 24px;">
-      <p style="width: 90vw; max-width: 800px; margin: 2rem auto 0 auto; font-size: 1.3rem;">
-        Un espacio único en Olivos, junto a Panamericana, pensado para vivir experiencias y concretar historias. En Espacio Sensorium te acompañamos a desarrollar proyectos, talleres y eventos en un entorno cálido, versátil y lleno de inspiración.
-      </p>
-    </div>
+<div id="video" class="video-wrapper " style="position: relative; width: 100%; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/JJVeNFRr9xI?autoplay=1&mute=1&loop=1&playlist=JJVeNFRr9xI" 
+          frameborder="0" allowfullscreen 
+          class="video-iframe">
+  </iframe>
+  <div class="video-overlay">
+    <p>Salon de Eventos y Multiespacio</p>
+    <img src="./assets/sensorium_logo_2.png" alt="Sensorium Logo">
+    <p>Un espacio único en Olivos...</p>
   </div>
 </div>
+
 
 
 
@@ -49,12 +45,12 @@
 <div id="startchange">
 
 <nav class=" dark:bg-gray-900 fixed w-full z-20 top-0 start-0  navbar">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <div class="max-w-screen-xl sa flex flex-wrap items-center  mx-auto p-4">
   <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="./assets/sensorium_logo_2.png" class="h-8" alt="Flowbite Logo">
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-      <button type="button" class="text-black bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" style="background-color: #E8CD9F;">CONTACTANOS</button>
+      <button type="button" class="text-black bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" style="background-color: #E8CD9F; margin-right: 20px;">CONTACTANOS</button>
       <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -64,7 +60,7 @@
   </div>
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
     <ul class="flex flex-col p-4  mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-      <li>
+      <li class="">
         <a href="#" class="block link-underline py-2 px-3 text-gray-900 rounded-sm md:bg-transparent md:text-black-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
       </li>
       <li>
@@ -203,26 +199,34 @@
     <h3 style="width: 50%; margin: auto; margin-bottom: 30px; margin-top: 30px; font-size: 20px;" class="text-WhytochooseUs">
         En <span style="color: #8d6819; font-weight: 800 !important;">Espacio Sensorium</span>, ofrecemos un entorno único donde los sentidos se encuentran. Nos especializamos en crear experiencias inolvidables y alquilamos nuestro espacio para eventos privados, personalizados, catas de vinos, maridajes y reuniones corporativas.
     </h3>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center " style="  width: 360px; height: 270px; max-width: 100%; justify-content: center;">
-            <span class="text-xl font-semibold text-gray-700 mb-2 quality" style="font-size: 20px;">Calidez y atención</span>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center" style="max-width: 100%; height: 100%; justify-content: center;">
+                       <img src="./assets/WhatsApp Image 2025-09-10 at 12.31.26 (2).jpeg" alt="Imagen 4" style="width: 80%; height: auto; border-radius: 12px;">
+
+          <span class="text-xl font-semibold text-gray-700 mb-2 quality" style="font-size: 20px;">Calidez y atención</span>
             <p class="text-gray-500 text-sm quality-text">Nos destacamos por el trato humano y personalizado.</p>
         </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center" style="width: 360px; height: 270px; max-width: 100%; justify-content: center;">
-            <span class="text-xl font-semibold text-gray-700 mb-2 quality">Innovación y creatividad</span>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center" style="max-width: 100%; height: 100%; justify-content: center;">
+                      <img src="./assets/WhatsApp Image 2025-09-10 at 12.31.26 (2).jpeg" alt="Imagen 4" style="width: 80%; height: auto; border-radius: 12px;">
+ 
+          <span class="text-xl font-semibold text-gray-700 mb-2 quality">Innovación y creatividad</span>
             <p class="text-gray-500 text-sm quality-text">Creamos experiencias únicas y originales.</p>
         </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center" style="width: 360px; height: 270px; max-width: 100%; justify-content: center;">
-            <span class="text-xl font-semibold text-gray-700 mb-2 quality">Experiencias memorables</span>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center" style="max-width: 100%; height: 100%; justify-content: center;">
+                        <img src="./assets/WhatsApp Image 2025-09-10 at 12.31.26 (2).jpeg" alt="Imagen 4" style="width: 80%; height: auto; border-radius: 12px;">
+
+          <span class="text-xl font-semibold text-gray-700 mb-2 quality">Experiencias memorables</span>
             <p class="text-gray-500 text-sm quality-text">Cada evento es pensado para dejar huella.</p>
         </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center " style="width: 360px; height: 270px; max-width: 100%; justify-content: center;">
-          <img src="" alt="">  
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center" style="max-width: 100%; height: 100%; justify-content: center;">
+                        <img src="./assets/WhatsApp Image 2025-09-10 at 12.31.26 (2).jpeg" alt="Imagen 4" style="width: 80%; height: auto; border-radius: 12px;">
+
           <span class="text-xl font-semibold text-gray-700 mb-2 quality">Versatilidad del espacio</span>
-            <p class="text-gray-500 text-sm quality-text">Adaptamos el lugar a tus necesidades.</p>
+            <p class="text-gray-500 text-sm quality-text">Un ambiente exclusivo y adaptable para cualquier tipo de evento</p>
         </div>
     </div>
 </div>
+
 
     <div class="imgs flex">
         <img src="https://lh3.googleusercontent.com/p/AF1QipMkPu3sKMdpClfoV2CHV0ETwo-_vjjL88Q6KYaD=s680-w680-h510" alt="" style="margin: 40px; width: 80%;" >
