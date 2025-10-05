@@ -83,7 +83,7 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
     font-weight: bold;
     color: #8d6819;
     text-align: center;
-    margin-bottom: -4rem;
+  margin-bottom: 1rem; /* evitamos solapamientos y espacio negativo */
 }
 
 .text-WhytochooseUs{
@@ -105,11 +105,11 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 1rem;
 }
 
-@medie (min-aspect-ratio: 16/9){
-    .back-video{
-        width: 100%;
-        height: auto;
-    }
+@media (min-aspect-ratio: 16/9){
+  .back-video{
+    width: 100%;
+    height: auto;
+  }
 }
 
 
@@ -428,6 +428,10 @@ nav {
 .sectionPorqueElegirnos {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra el título y el texto */
+  width: 100%;
 }
 
 .text-WhytochooseUs {
@@ -439,73 +443,154 @@ nav {
 
 /* Grilla */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  width: 100%;
+  max-width: 1100px; /* limita el ancho para centrar visualmente */
+  margin: 0 auto; /* centra la grilla dentro de la sección */
 }
 
-/* Estilos para cada tarjeta */
-.grid > .bg-white {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13), 0 1.5px 6px rgba(0, 0, 0, 0.08);
-    background: linear-gradient(135deg, #f8fafc 80%, #e2e8f0 100%);
-    padding: 1.5rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
+/* Aumentar tamaño y paddings sólo en la sección 'Por qué elegirnos' */
+.sectionPorqueElegirnos .grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1500px;
+  gap: 32px;
 }
 
-/* Estilo para las imágenes */
-.grid > .bg-white img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
-    margin-bottom: 1rem;
+.sectionPorqueElegirnos .grid > .bg-white {
+  padding: 2rem;
+  border-radius: 18px;
+  min-width: 300px;
 }
 
-/* Títulos */
-.grid > .bg-white h2 {
-    font-family: 'Georgia', serif;
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: #374151;
-    margin-bottom: 0.5rem;
+.sectionPorqueElegirnos .grid > .bg-white img {
+  max-width: 240px;
+  margin-bottom: 1rem;
 }
 
-/* Párrafos */
-.grid > .bg-white p {
-    font-family: 'Segoe UI', 'Arial', sans-serif;
-    font-size: 0.98rem;
-    color: #4b5563;
-    text-align: center;
-    margin-bottom: 0;
+.sectionPorqueElegirnos .grid > .bg-white .quality {
+  font-size: 1.05rem;
 }
 
-/* Hover de las tarjetas */
-.grid > .bg-white:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.16), 0 3px 12px rgba(0,0,0,0.12);
-    transform: translateY(-4px) scale(1.02);
+/* Swiper gallery styles for the imgs slider */
+.marcaSwiper {
+  width: 100%;
+  padding: 40px 0;
+}
+.marcaSwiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.marcaSwiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.marcaSwiper .swiper-button-next, .marcaSwiper .swiper-button-prev {
+  color: #8d6819;
+}
+
+/* Definitive contact-section: dos columnas 50/50, mapa ocupa toda la mitad derecha y form ocupa la izquierda */
+.contact-section {
+  background: #e8d9c7;
+  padding: 3rem 1.5rem;
+  min-height: 680px; /* asegura altura suficiente para que el mapa llene la mitad */
+}
+
+.contact-section .max-w-6xl .grid {
+  display: flex; /* switch to flexbox to force exact halves */
+  gap: 36px;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.contact-section h2 {
+  font-family: 'Swiss 721 Bold BT', 'Amsterdam Two', serif;
+  font-size: 44px;
+  color: #8d6819;
+  margin: 0 0 18px 0;
+}
+
+.contact-section .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: none; /* permitir que el form ocupe todo el ancho de la columna izquierda */
+}
+
+.contact-input {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #f3f2f1;
+  color: #333;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.contact-input::placeholder { color: #9b9b9b; }
+
+.contact-form textarea.contact-input { min-height: 220px; resize: vertical; }
+
+.submit-btn {
+  background: #8d6819;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  max-width: 180px;
+  margin-top: 8px;
+  align-self: center; /* mantiene el botón centrado bajo el form */
+}
+
+.map-embed {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 680px; /* rellenar la mitad derecha; igual a la altura mínima de la sección */
+  border-radius: 8px;
+  border: 0;
+}
+
+/* Flex children: left/right 50% */
+.contact-left {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 12px;
+  box-sizing: border-box;
+}
+
+.contact-right {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-right .map-embed {
+  flex: 1 1 auto; /* fills the column */
+}
+
+@media (max-width: 900px) {
+  .contact-section { padding: 2rem 1rem; min-height: auto; }
+  .contact-section .max-w-6xl .grid { grid-template-columns: 1fr; }
+  .submit-btn { align-self: center; }
+  .map-embed { min-height: 360px; }
 }
 
 @media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-    }
-
-    .grid > .bg-white img {
-        max-width: 120px;
-    }
-
-    .text-WhytochooseUs {
-        font-size: 1rem;
-    }
+  .three-images { padding: 12px; }
+  .three-images img { max-width: 85%; margin: 0 auto; }
 }
 
 
