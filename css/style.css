@@ -2,6 +2,10 @@
  @import url(https://db.onlinewebfonts.com/c/7f33f727cde087e7f988eec2045ea4c2?family=Swiss+721+Light+BT); 
  @import url(https://db.onlinewebfonts.com/c/b0ff35c4fe28bbe6f85c40d736a0aa69?family=Swiss+721+Bold+BT); 
 
+/* Prevent horizontal overflow on small screens and use border-box sizing */
+html, body { overflow-x: hidden; }
+*, *::before, *::after { box-sizing: border-box; }
+
  .back-video {
     position: absolute;
     top: 0;
@@ -159,18 +163,7 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
 }
 
 
-footer a{
-border-radius: 25px;
-  border-width: 0px;
-  background-color: rgb(0, 0, 0);
-  --font-color: rgb(255, 255, 255);
-  --border-color: rgb(0, 0, 0);
-  background-color: rgb(171, 159, 145);
-  --font-color-hover: rgb(255, 255, 255);
-  --border-color-hover: rgb(0, 0, 0);
-  --m-height: 13.88888888888889vw;
-  --m-width: 49.44444444444444vw;
-}
+
 
 header {
     position: relative;
@@ -347,7 +340,6 @@ nav {
 .grid > .bg-white img {
     border-radius: 12px;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
     width: 100%;
     max-height: 160px;
     object-fit: cover;
@@ -580,6 +572,46 @@ nav {
 .contact-right .map-embed {
   flex: 1 1 auto; /* fills the column */
 }
+
+/* Logo badge style used in the "Por qué elegirnos" cards */
+.logo-badge {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #8d6819; /* brown circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(141,104,25,0.15);
+  margin-bottom: 18px;
+}
+
+.logo-img {
+  width: 56%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%) sepia(85%) saturate(450%) hue-rotate(5deg) brightness(0.95) contrast(1.05);
+  -webkit-filter: grayscale(100%) sepia(85%) saturate(450%) hue-rotate(5deg) brightness(0.95) contrast(1.05);
+}
+
+/* .logo-mark: use the PNG as a mask so we can paint its fills with an exact HEX color */
+.logo-mark {
+  width: 150px;
+  height: 150px;
+  background-color: #e5ca9b; /* exact color requested */
+  -webkit-mask-image: url('../assets/equip-removebg-preview.png');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: url('../assets/equip-removebg-preview.png');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  display: block;
+}
+
+/* Fallback: if mask is not supported, show the original img hidden underneath */
+.logo-badge img.logo-img { display: none; }
 
 @media (max-width: 900px) {
   .contact-section { padding: 2rem 1rem; min-height: auto; }
